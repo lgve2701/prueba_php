@@ -1,21 +1,12 @@
 <?php
 
     function conexion(){
-		// prod
 		$host = "localhost";
 		$dbname = "db_prueba_dnc";
-		$username = 'mysql_root';
-		$password = 'Pass1234';
-        $port = "3307";
+		$username = 'root';
+		$password = 'root';
+        $port = "3306";
 		$fullHost = $host.':'.$port;
-
-		// dev
-		// $host = "localhost";
-		// $dbname = "db_prueba_dnc";
-		// $username = 'root';
-		// $password = 'root';
-        // $port = "3306";
-		// $fullHost = $host.':'.$port;
 
 		//echo 'mysql:host='.$fullHost.';dbname='.$dbname.';userName='.$username.';password='.$password;
         $pdo = new PDO('mysql:host='.$fullHost.';dbname='.$dbname, $username, $password);
