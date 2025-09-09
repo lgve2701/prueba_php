@@ -1,0 +1,80 @@
+.formWrapper{
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    width: 75%;
+    display: inline-block;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    background: #5a6c94;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover {
+    background: #4a587d;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.notification_success{
+    background-color: #c1e5c0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 50%;
+}
+
+.notification_error{
+    background-color: #f7bebe;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 50%;
+}
+
+.notification_info{
+    background-color: #c6cbff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 50%;
+}
+
+.errorbox {
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(255, 0, 0, 0.81) !important;
+    -moz-box-shadow: 0px 0px 16px 0px rgba(255, 0, 0, 0.81) !important;
+    box-shadow: 0px 0px 16px 0px rgba(255, 0, 0, 0.81) !important;
+}
+

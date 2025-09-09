@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  mysql_prueba_dnc:
+    image: mysql:8.0
+    container_name: mysql_prueba_dnc
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Pass1234
+      MYSQL_USER: mysql_root
+      MYSQL_PASSWORD: Pass1234
+      MYSQL_DATABASE: db_prueba_dnc
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+  php_apache:
+    build: ./   # 👈 usa el Dockerfile en la carpeta "docker"
+    container_name: php_apache_dnc
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ../:/var/www/html
+    depends_on:
+      - mysql_prueba_dnc
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin_dnc
+    restart: always
+    environment:
+      PMA_HOST: mysql_prueba_dnc
+      PMA_USER: mysql_root
+      PMA_PASSWORD: Pass1234
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql_prueba_dnc
+
+volumes:
+  mysql_data:

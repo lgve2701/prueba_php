@@ -1,0 +1,22 @@
+/* footer section con link a redes linked-in y git-hub */
+
+.fixed-footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 15px;
+    background-color: #5a6c94;
+    color: white;
+}
+.fixed-footer .social-links {
+    margin: 10px 0;
+}
+.fixed-footer .social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    /* font-size: 24px; */
+    transition: color 0.3s;
+}
+.fixed-footer .social-links a:hover {
+    color: #bad4dd;
+}

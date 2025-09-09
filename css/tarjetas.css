@@ -1,0 +1,52 @@
+h2 {
+    margin-bottom: 15px;
+}
+
+/* Grid responsivo */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.card-title {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    background: #fff;
+}
+
+/* Animación de deslizante */
+.card-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 10px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.card.active .card-info {
+    max-height: 200px; /* Ajusta según contenido */
+    padding: 10px;
+}

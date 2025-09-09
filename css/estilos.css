@@ -1,0 +1,55 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body con flexbox para cuadro central */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* ocupa toda la pantalla */
+  font-family: Arial, sans-serif;
+}
+
+/* Cuadro de contenido centralizado */
+
+.main-content{
+    flex: 1; /* ocupa el espacio disponible */
+    /*overflow-y: auto;*/ /* scroll solo cuando es necesario */
+    padding: 20px;
+    background: #f4f4f4;
+
+    /* margin: 0; */
+    /* height: 88vh; */
+    display: flex;
+
+    justify-content: center; /* Centrar horizontal */
+    /* align-items: center; */     /* Centrar vertical */
+    background-color: #f0f0f0;
+}
+.contenedor {
+    width: 80%;
+    /*max-width: 400px;*/ /* Limite en pantallas grandes */
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+
+    align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    /* align-items: flex-start; */
+  }
+
+  .nav-center {
+    margin: 10px 0;
+  }
+}
