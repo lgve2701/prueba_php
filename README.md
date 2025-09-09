@@ -17,10 +17,18 @@ y se muestran sus diferentes opciones de acuerdo los parametros enviados.
 
 3. Pegar carpeta en raiz de servidor PHP, por ejemplo "../www/html"
 
-4. Abrir el archivo SQL/init.sql en cualquier editor MySQL como workbench y ejecutar.
+4. Abrir el archivo "SQL/init.sql" en cualquier editor MySQL como workbench y ejecutar.
 	Este script crea las tablas y stored procedures necesarios para las pruebas.
-	
+
+5. Configurar variables de conexión MySQL en archivo "API/utils.php"
+		$host = "localhost";
+		$dbname = "db_prueba_dnc"; // el script init.sql crea la base de pruebas
+		$username = '{usuario}';
+		$password = '{password}';
+        $port = "3306"; // si la base utiliza otro puerto cambiar
+
 5. Ingrear a "localhost" en un navegador de internet.
+
 
 -- PRUEBAS --
 
