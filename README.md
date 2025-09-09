@@ -19,6 +19,8 @@ y se muestran sus diferentes opciones de acuerdo los parametros enviados.
 
 4. Abrir el archivo SQL/init.sql en cualquier editor MySQL como workbench y ejecutar.
 	Este script crea las tablas y stored procedures necesarios para las pruebas.
+	
+5. Ingrear a "localhost" en un navegador de internet.
 
 -- PRUEBAS --
 
