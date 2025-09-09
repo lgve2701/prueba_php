@@ -40,9 +40,12 @@ La pagina es intuitiva:
 
 3. Usuarios: registro de información de usuarios nuevos. La misma página indica si algun dato no fue ingresado correctamente.
 
-4. Productos: Contiene 2 ejemplos para listar productos (Esta opción se alimenta de la tabla [productos_venta], donde se pueden agregar mas ejemplos)
-	2.1 Acordion: en el título muestra el nombre y precio. Al hacer clic expande la sección para mostrar los detalles del producto.
-	2.2 Tarjetas: Muestra tarjetas con la imagen y nombre del producto. Al hacer clic expande la tarjeta mostrando los detalles del producto.
+4. Productos: Contiene 2 ejemplos para listar productos (Esta opción se alimenta de la tabla [productos_venta], donde se pueden agregar mas ejemplos).
+	4.1 Acordion: en el título muestra el nombre y precio. Al hacer clic expande la sección para mostrar los detalles del producto.
+	4.2 Tarjetas: Muestra tarjetas con la imagen y nombre del producto. Al hacer clic expande la tarjeta mostrando los detalles del producto.
+	
+	- Si se desea agregar mas productos, cualquier imagen asociada se debe copiar a la carpeta "api/imagenes/productos" y en el campo productos_venta.imagen asignar el nombre del archivo.png o jpg, etc.
+	
 
 
 -- REVISION --
