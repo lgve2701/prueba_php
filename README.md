@@ -9,33 +9,16 @@ y se muestran sus diferentes opciones de acuerdo los parametros enviados.
 
 1. Instalar docker desktop (https://www.docker.com/products/docker-desktop/)
 
-2. Descargar la carpeta con el codigo desde github: https://github.com/lgve2701/prueba_php/tree/master Ramas: -master -feature/form-validation: version con las opciones ya funcionales -feature/scripts: agregados los scripts sql y python (importante: el script python no funciona aun).
+2. Descargar la carpeta con el codigo desde github: https://github.com/lgve2701/prueba_php/tree/master 
+	Ramas: 
+	-master: version final completa
+	-feature/form-validation: version con las opciones ya funcionales 
+	-feature/scripts: agregados los scripts sql y python (importante: el script python no funciona aun).
 
-3. Instlación de archivos docker:
+3. Pegar carpeta en raiz de servidor PHP, por ejemplo "../www/html"
 
-	Abrir Visual Studio Code y abrir la carpeta descargada.
-	Abrir la terminal y navegar a la carpeta docker "cd docker"
-
-	Si no se utiliza VS Code:
-	En cmd windows ir a la carpeta docker
-	
-	Dentro de la carpeta docker incluída en el proyecto se encuentran:
-	- archivo: docker-compose.yml - archivo con instrucciones para montar php y mysql.
-	- archivo: Dockerfile - archivo con instrucciones para agregar librerias [mysqli] [pdo] [pdo_mysql] a php
-	- carpeta: docker-entrypoint-initdb.d 
-		- archivo script: init.sql - archivo con instrucciones para crear base de datos y tablas de prueba.
-
-4. Ejecutar el comando "docker-compose up -d"
-		- Este comando genera los dockers necesarios para realizar pruebas php y mysql. Tambien crea la base de datos de prueba y crea las tablas y registros iniciales.	
-
-5. Abrir un navegardor de internet y escribir localhost:8080.
-
-6. Para reiniciar/reintentar se debe detener y remover docker:
-	docker-compose down -v
-	docker rm mysql_prueba_dnc
-
-*. Si no se desea utilizar docker, se puede pegar el contenido de la carpeta en el servidor apache de preferencia (xamp, laragon, etc).
-
+4. Abrir el archivo SQL/init.sql en cualquier editor MySQL como workbench y ejecutar.
+	Este script crea las tablas y stored procedures necesarios para las pruebas.
 
 -- PRUEBAS --
 
