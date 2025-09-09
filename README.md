@@ -13,6 +13,10 @@ y se muestran sus diferentes opciones de acuerdo los parametros enviados.
 1. Instalar docker desktop (https://www.docker.com/products/docker-desktop/)
 
 2. Descargar la carpeta con el codigo desde github: https://github.com/lgve2701/prueba_php/tree/master
+   Ramas:
+   -master
+   -feature/form-validation: version con las opciones ya funcionales
+   -feature/scripts: agregados los scripts sql y python (importante: el script python no funciona aun).
 
 3. Instlación de archivos docker:
 
