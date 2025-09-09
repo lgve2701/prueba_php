@@ -10,20 +10,18 @@ y se muestran sus diferentes opciones de acuerdo los parametros enviados.
 
 -- INSTALACION --
 
-1. Instalar docker desktop (https://www.docker.com/products/docker-desktop/)
-
-2. Descargar la carpeta con el codigo desde github: https://github.com/lgve2701/prueba_php/tree/master 
+1. Descargar la carpeta con el codigo desde github: https://github.com/lgve2701/prueba_php/tree/master 
 	Ramas: 
 	-master: version final completa
 	-feature/form-validation: version con las opciones ya funcionales 
 	-feature/scripts: agregados los scripts sql y python (importante: el script python no funciona aun).
 
-3. Pegar carpeta en raiz de servidor PHP, por ejemplo "../www/html"
+2. Pegar carpeta en raiz de servidor PHP, por ejemplo "../www/html"
 
-4. Abrir el archivo "SQL/init.sql" en cualquier editor MySQL como workbench y ejecutar.
+3. Abrir el archivo "SQL/init.sql" en cualquier editor MySQL como workbench y ejecutar.
 	Este script crea las tablas y stored procedures necesarios para las pruebas.
 
-5. Configurar variables de conexión MySQL en archivo "API/utils.php"
+4. Configurar variables de conexión MySQL en archivo "API/utils.php"
 		$host = "localhost";
 		$dbname = "db_prueba_dnc"; // el script init.sql crea la base de pruebas
 		$username = '{usuario}';
