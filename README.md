@@ -38,8 +38,8 @@ y se muestran sus diferentes opciones de acuerdo los parametros enviados.
 5. Abrir un navegardor de internet y escribir localhost:8080.
 
 6. Para reiniciar/reintentar se debe detener y remover docker:
-	docker-compose down -v
-	docker rm mysql_prueba_dnc
+docker-compose down -v
+docker rm mysql_prueba_dnc
 
 *. Si no se desea utilizar docker, se puede pegar el contenido de la carpeta en el servidor apache de preferencia (xamp, laragon, etc).
 
