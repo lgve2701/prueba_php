@@ -136,6 +136,7 @@ DELIMITER ;
 -- 4. carga de datos ejemplo --
 START TRANSACTION;
 
+-- productos ejemplo para tarjetas expandibles --
 INSERT INTO productos_venta(nombre, descripcion, imagen, precio, stock)
 VALUES(
 	'Notebook ASUS Vivobook', 
@@ -170,6 +171,35 @@ VALUES(
 	6403,
 	2
 );
+
+-- seccion 3: datos para consultas de usuarios --
+INSERT INTO usuarios (nombre, correo, password_hash, fecha_nacimiento, fecha_registro)
+  SELECT 
+    CONCAT('Usuario ', n) AS nombre,
+    CONCAT('usuario', n, '@ejemplo.com') AS correo,
+    SHA2(CONCAT('Password!', n), 256) AS password_hash,
+    DATE_ADD('1980-01-01', INTERVAL (FLOOR(1 + (RAND() * 8000))) DAY) AS fecha_nacimiento,
+    DATE_ADD('2025-01-01', INTERVAL (FLOOR(1 + (RAND() * 365))) DAY) AS fecha_registro
+  FROM (
+    SELECT @row := @row + 1 AS n
+    FROM information_schema.tables t1, information_schema.tables t2, (SELECT @row:=0) init
+    LIMIT 100
+  ) x;
+-- usuarios con cuentas @gmail.com --
+INSERT INTO usuarios (nombre, correo, password_hash, fecha_nacimiento, fecha_registro)
+  SELECT 
+    CONCAT('Usuario ', n) AS nombre,
+    CONCAT('usuario', n, '@gmail.com') AS correo,
+    SHA2(CONCAT('Password!', n), 256) AS password_hash,
+    DATE_ADD('1980-01-01', INTERVAL (FLOOR(1 + (RAND() * 8000))) DAY) AS fecha_nacimiento,
+    DATE_ADD('2025-01-01', INTERVAL (FLOOR(1 + (RAND() * 365))) DAY) AS fecha_registro
+  FROM (
+    SELECT @row := @row + 1 AS n
+    FROM information_schema.tables t1, information_schema.tables t2, (SELECT @row:=0) init
+    LIMIT 25
+  ) x;
+
+
 
 COMMIT;
 

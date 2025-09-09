@@ -47,6 +47,7 @@
         <li><a href="index.php?vista=home" class="active">Home</a></li>
         <li><a href="index.php?vista=registro_usuario">Usuarios</a></li>
         <li><a href="index.php?vista=lista_productos">Productos</a></li>
+        <li><a href="index.php?vista=reporte_productos">Reporte Productos</a></li>
       </ul>
     </div>
 

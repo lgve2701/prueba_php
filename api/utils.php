@@ -9,7 +9,7 @@
         $port = "3307";
 		$fullHost = $host.':'.$port;
 
-		//dev
+		// dev
 		// $host = "localhost";
 		// $dbname = "db_prueba_dnc";
 		// $username = 'root';
